@@ -1,3 +1,7 @@
+# Solana Trading Bot
+
+A sophisticated bot for monitoring and analyzing Solana wallet transactions.
+
 # Setup Instructions
 
 1. Clone the repository:
@@ -18,28 +22,40 @@
    npm start
    ```
 
+## Architecture
+
+```ascii
 Main Thread
 │
 ├─── Process New Transactions (Main Loop)
-│ │
-│ ├─── Check Transaction 1
-│ ├─── Check Transaction 2
-│ └─── Check Transaction 3
+│    │
+│    ├─── Check Transaction 1
+│    ├─── Check Transaction 2
+│    └─── Check Transaction 3
 │
 ├─── Wallet Monitor 1 (15 min loop)
-│ │
-│ ├─── Check for sells/buys
-│ └─── Log activities
+│    │
+│    ├─── Check for sells/buys
+│    └─── Log activities
 │
 ├─── Wallet Monitor 2 (15 min loop)
-│ │
-│ ├─── Check for sells/buys
-│ └─── Log activities
+│    │
+│    ├─── Check for sells/buys
+│    └─── Log activities
 │
 └─── Wallet Monitor N (15 min loop)
-│
-├─── Check for sells/buys
-└─── Log activities
+     │
+     ├─── Check for sells/buys
+     └─── Log activities
+```
+
+## Features
+
+- 🔍 Real-time transaction monitoring
+- 👛 Intelligent wallet analysis
+- ⏱️ 15-minute detailed wallet tracking
+- 📊 Comprehensive transaction logging
+- 🔄 Concurrent wallet monitoring
 
 ### Parallel Execution of New Transactions and Wallet Monitoring
 
